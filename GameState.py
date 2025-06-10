@@ -2,7 +2,13 @@ class GameState:
     def __init__(self):
         self.current_player = "X"
         self.active_board = None
-        self.last_move = None  # (br, bc, fr, fc)
+        self.last_move = None
+        self.current_board = None
+        self.vs_ai = None
+        self.difficulty = None
+        self.player_symbol = None
+        self.ai_symbol = None
+        self.player_label = None
 
         self.mini_board_statuses = [
             [None for _ in range(3)]

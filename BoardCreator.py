@@ -2,8 +2,8 @@ from tkinter import *
 from MiniBoard import MiniBoard
 
 
-
 def CreateBoard(root, click_handler):
+    root.title("Ultimate Tick-Tack-Toe")
 
     def keep_square(event):
         if event.widget == root:

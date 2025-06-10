@@ -1,17 +1,14 @@
 from tkinter import *
 
-def CheckGlobalWin(statuses):
 
+def CheckGlobalWin(statuses):
     for i in range(3):
-        # Горизонтали
         if statuses[i][0] in ("X", "O") and all(statuses[i][j] == statuses[i][0] for j in range(3)):
             return statuses[i][0]
 
-        # Вертикали
         if statuses[i][0] in ("X", "O") and all(statuses[j][i] == statuses[0][i] for j in range(3)):
             return statuses[0][i]
 
-    # Диагонали
     if statuses[1][1] in ("X", "O"):
         if all(statuses[i][i] == statuses[1][1] for i in range(3)):
             return statuses[1][1]
@@ -20,11 +17,13 @@ def CheckGlobalWin(statuses):
 
     return None
 
+
 def CheckGlobalDraw(statuses):
     return all(
         all(cell is not None for cell in row)
         for row in statuses
     )
+
 
 def UpdateActiveBoardVisuals(boards, active_board, last_move=None):
     for i in range(3):

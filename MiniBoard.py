@@ -1,12 +1,13 @@
 from tkinter import *
 
+
 class MiniBoard:
     def __init__(self, row, col, frame):
-        self.row = row  # i
-        self.col = col  # j
-        self.frame = frame  # фрейм, в котором лежат кнопки
+        self.row = row
+        self.col = col
+        self.frame = frame
         self.cells = [[None for _ in range(3)] for _ in range(3)]
-        self.winner = None  # "X", "O", None
+        self.winner = None
 
     def check_win(self):
         for i in range(3):
@@ -35,7 +36,6 @@ class MiniBoard:
             for btn in row:
                 btn.config(state=DISABLED)
 
-        # Показываем крупный символ в центре (можно заменить на фон)
         label = Label(self.frame, text=winner, font=("Arial", 60), fg="gray", bg="white")
         label.place(relx=0.5, rely=0.5, anchor="center")
 
@@ -49,15 +49,13 @@ class MiniBoard:
     def mark_draw(self):
         self.winner = "draw"
 
-        # Блокируем все кнопки
         for row in self.cells:
             for btn in row:
                 btn.config(state=DISABLED)
 
-        # Показываем символ ничьей в центре
         label = Label(
             self.frame,
-            text="–",  # можно заменить на "Ничья" или "Draw"
+            text="-",
             font=("Arial", 40),
             fg="gray",
             bg="white"
