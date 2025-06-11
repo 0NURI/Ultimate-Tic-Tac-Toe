@@ -50,3 +50,25 @@ def UpdateActiveBoardVisuals(boards, active_board, last_move=None):
                         fg=fg,
                         bg="lightgreen" if is_last else bg
                     )
+
+def check_win_matrix(mat):
+    for i in range(3):
+        if mat[i][0] != "" and all(mat[i][j] == mat[i][0] for j in range(3)):
+            return mat[i][0]
+        if mat[0][i] != "" and all(mat[j][i] == mat[0][i] for j in range(3)):
+            return mat[0][i]
+    if mat[1][1] != "":
+        if all(mat[i][i] == mat[1][1] for i in range(3)):
+            return mat[1][1]
+        if all(mat[i][2-i] == mat[1][1] for i in range(3)):
+            return mat[1][1]
+    return None
+
+def extract_symbol_matrix(boards):
+    return [
+        [
+            [[cell["text"] for cell in row] for row in boards[br][bc].cells]
+            for bc in range(3)
+        ]
+        for br in range(3)
+    ]

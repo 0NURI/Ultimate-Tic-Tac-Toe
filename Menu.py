@@ -28,7 +28,7 @@ def show_menu(callback):
     Radiobutton(symbol_frame, text="O", variable=symbol_var, value="O").pack(side=LEFT, padx=5)
 
     Button(menu_root, text="Лёгкий (рандом)", command=lambda: choose_vs_ai("easy")).pack(pady=2)
-    Button(menu_root, text="Средний (глубина 2)", command=lambda: choose_vs_ai("medium")).pack(pady=2)
-    Button(menu_root, text="Сложный (глубина 4)", command=lambda: choose_vs_ai("hard")).pack(pady=2)
+    Button(menu_root, text="Средний (глубина 4)", command=lambda: choose_vs_ai("medium")).pack(pady=2)
+    Button(menu_root, text="Сложный (глубина 6)", command=lambda: choose_vs_ai("hard")).pack(pady=2)
 
     menu_root.mainloop()

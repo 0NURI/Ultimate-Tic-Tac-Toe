@@ -1,5 +1,3 @@
-from time import sleep
-
 from Utils import *
 from PlayerAI import MakeAIMove
 
@@ -16,10 +14,8 @@ def HandleClick(br, bc, fr, fc, boards, state):
     if cell["text"] != "":
         return
 
-    # Ставим X или O
     cell.config(text=state.current_player)
 
-    # Проверяем, не победил ли кто-то в этой мини-доске
     winner = mini.check_win()
     if winner:
         mini.mark_winner(winner)
@@ -28,7 +24,9 @@ def HandleClick(br, bc, fr, fc, boards, state):
         global_winner = CheckGlobalWin(state.mini_board_statuses)
         if global_winner:
             state.game_over = True
-            state.player_label.config(text=f"Победил {winner}!", fg="red")
+            state.player_label.config(text=f"Победил {global_winner}!", fg="red")
+            print(f"Глобальную доску выиграл {global_winner}")
+            return
     elif mini.check_draw():
         mini.mark_draw()
         state.mini_board_statuses[br][bc] = "draw"
@@ -36,14 +34,14 @@ def HandleClick(br, bc, fr, fc, boards, state):
         global_winner = CheckGlobalWin(state.mini_board_statuses)
         if global_winner:
             state.game_over = True
+            state.player_label.config(text=f"Победил {global_winner}!", fg="red")
             print(f"Глобальную доску выиграл {global_winner}")
-            return
+            return  # обязательно остановить выполнение
         elif CheckGlobalDraw(state.mini_board_statuses):
             state.game_over = True
             state.player_label.config(text=f"Ничья!", fg="red")
             return
 
-    # Определение следующей активной доски
     next_board = (fr, fc)
     next_mini = boards[next_board[0]][next_board[1]]
 
@@ -61,4 +59,4 @@ def HandleClick(br, bc, fr, fc, boards, state):
     UpdateActiveBoardVisuals(boards, state.active_board, state.last_move)
 
     if not state.game_over and state.vs_ai and state.current_player != state.player_symbol:
-        state.player_label.after(1000, lambda: MakeAIMove(boards, state))
+        MakeAIMove(boards, state)

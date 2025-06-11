@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af5b00fa-0b78-4975-8385-380d48f6aceb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GameWindow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlayerAI.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StartWindow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Startup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Ultimate Tick-Tack-Toe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ultimate Tick-Tack-Toe.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/BoardCreator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ButtonClickHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ButtonClickHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameState.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameState.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniBoard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/GameWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerAI.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerAI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,12 +40,12 @@
     &quot;assignee&quot;: &quot;0NURI&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/0NURI/Ultimate-Tick-Tack-Toe.git&quot;,
-    &quot;accountId&quot;: &quot;4f4e8785-b8c9-47b5-845c-0f838177bdc3&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/0NURI/Ultimate-Tick-Tack-Toe",
+    "accountId": "1a6daa99-2cb6-4ec8-87c1-1b64ae0e72b5"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -64,8 +58,11 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.BoardCreator.executor": "Run",
+    "Python.ButtonClickHandler.executor": "Debug",
+    "Python.PlayerAI.executor": "Run",
     "Python.Program.executor": "Run",
     "Python.Startup.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -239,6 +236,7 @@
       <workItem from="1749419720793" duration="30000" />
       <workItem from="1749419811381" duration="4474000" />
       <workItem from="1749582424891" duration="3791000" />
+      <workItem from="1749630945996" duration="2785000" />
     </task>
     <servers />
   </component>
@@ -257,8 +255,11 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Ultimate_Tick_Tack_Toe$Startup.coverage" NAME="Startup Coverage Results" MODIFIED="1749586031783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ultimate_Tick_Tack_Toe$Program.coverage" NAME="Program Coverage Results" MODIFIED="1749422584341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ultimate_Tick_Tack_Toe$BoardCreator.coverage" NAME="BoardCreator Coverage Results" MODIFIED="1749422491797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ultimate_Tick_Tack_Toe$Startup.coverage" NAME="Startup Coverage Results" MODIFIED="1749632473196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ultimate_Tick_Tack_Toe$test.coverage" NAME="test Coverage Results" MODIFIED="1749600028135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ultimate_Tick_Tack_Toe$PlayerAI.coverage" NAME="PlayerAI Coverage Results" MODIFIED="1749590660508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ultimate_Tick_Tack_Toe$ButtonClickHandler.coverage" NAME="ButtonClickHandler Coverage Results" MODIFIED="1749632169419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
